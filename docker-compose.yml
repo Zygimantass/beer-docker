@@ -13,6 +13,6 @@ services:
                 build:
                         context: ./web
                         args:
-                                BACKEND_IP: 35.195.217.88
+                                BACKEND_IP: localhost 
                 ports:
                         - "80:80"
