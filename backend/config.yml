@@ -1,0 +1,5 @@
+port: 7777
+db:
+    uri: db:3306
+    username: root
+    password: changeThis

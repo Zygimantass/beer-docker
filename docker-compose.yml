@@ -1,0 +1,18 @@
+version: '3'
+services:
+        backend:
+                build: ./backend
+                ports:
+                        - "7777:7777"
+        db:
+                build: ./db
+                environment:
+                        MYSQL_ROOT_PASSWORD: changeThis
+                        MYSQL_DATABASE: beer  
+        web:
+                build:
+                        context: ./web
+                        args:
+                                BACKEND_IP: 35.195.217.88
+                ports:
+                        - "80:80"
